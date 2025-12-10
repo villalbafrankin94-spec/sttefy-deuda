@@ -1,0 +1,50 @@
+<div class="Container">
+    <div class="row">
+        <label for="gradeselect">Selectiona tu rol</label>
+        <select id="gradeselect" class="select-form" [(ngModel)]="Rol">
+            <option value="a">Admin</option>
+            <option value="b">Editor</option>
+            <option value="c">Lector</option>
+        </select>
+    </div>
+    <div class="row">
+        <div [ngSwitch]="Rol">
+            <span *ngSwitchCase="'a'">
+                <div class="card">
+                    <div class="card-header">
+                        Admin
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Admin</h5>
+                        <p class="card-text">Tu eres admin asi que puedes hacer todo</p>
+                        <a href="#" class="btn btn-primary">Empezar</a>
+                    </div>
+                </div>
+            </span>
+            <span *ngSwitchCase="'b'">
+                <div class="card">
+                    <div class="card-header">
+                        Editor
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Editor</h5>
+                        <p class="card-text">Tu eres editor Solo puedes editar las paginas secundarias</p>
+                        <a href="#" class="btn btn-primary">Empezar</a>
+                    </div>
+                </div>
+            </span>
+            <span *ngSwitchCase="'c'">
+                <div class="card">
+                    <div class="card-header">
+                        lector
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">lector</h5>
+                        <p class="card-text">Tu eres lector solo puedes ver que han hecho los editores y el admin</p>
+                        <a href="#" class="btn btn-primary">Empezar</a>
+                    </div>
+                </div>
+            </span>
+        </div>
+    </div>
+</div>

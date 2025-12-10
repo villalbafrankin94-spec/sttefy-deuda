@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row"><br>
+        <label for="sus">Select of the Plan</label><br>
+        <select class="from-select" name="" id="sus" [(ngModel)]="status"><br>
+            <option value="Gold">Plan Gold</option>
+            <option value="Iron">Plan Iron</option>
+            <option value="Copper">Plan Copper</option>
+        </select>
+    </div>
+
+    <div class="row">
+        <div [ngSwitch]="status">
+            <div class="card">
+                <div *ngSwitchCase="'Gold'">Gold subscription</div>
+                <div *ngSwitchCase="'Gold'">plan1-year subscription</div>
+                <div *ngSwitchCase="'Gold'">Access to all content + exclusives</div>
+                <div *ngSwitchCase="'Gold'">$99.99</div>
+                <div *ngSwitchCase="'Iron'">Iron subscription plan</div>
+                <div *ngSwitchCase="'Iron'">6-month subscription</div>
+                <div *ngSwitchCase="'Iron'">Access to all content</div>
+                <div *ngSwitchCase="'Iron'">$66.66</div>
+                <div *ngSwitchCase="'Copper'">copper subscription plan</div>
+                <div *ngSwitchCase="'Copper'">1-month subscription</div>
+                <div *ngSwitchCase="'Copper'">Limited access</div>
+                <div *ngSwitchCase="'Copper'">$33.33</div>
+            </div>
+        </div>
+    </div>
+</div>
